@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Pasham Nikitha, Computer Science (AI & ML) student and Python developer.">
+  <title>Pasham Nikitha | AI & ML Student</title>
+  <style>
+    :root { color-scheme: light; --ink:#111; --muted:#555; --line:#d7d7d7; --paper:#fff; --soft:#f5f5f5; --width:1080px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.65 Arial, Helvetica, sans-serif; }
+    a { color:inherit; text-underline-offset:4px; }
+    a:hover { text-decoration-thickness:2px; }
+    .wrap { width:min(var(--width), calc(100% - 48px)); margin:auto; }
+    header { border-bottom:1px solid var(--line); }
+    .nav { min-height:74px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { font-size:15px; font-weight:700; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
+    nav { display:flex; gap:24px; flex-wrap:wrap; }
+    nav a { font-size:13px; text-decoration:none; color:var(--muted); }
+    nav a:hover { color:var(--ink); }
+    .hero { padding:104px 0 92px; border-bottom:1px solid var(--line); }
+    .eyebrow { margin:0 0 18px; font-size:12px; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--muted); }
+    h1 { max-width:900px; margin:0; font-size:clamp(42px, 8vw, 86px); line-height:1.02; letter-spacing:-.065em; }
+    .hero-copy { max-width:700px; margin:26px 0 0; font-size:19px; color:#333; }
+    .actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:30px; }
+    .button { display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border:1px solid var(--ink); border-radius:3px; text-decoration:none; font-size:14px; font-weight:700; }
+    .button.primary { background:var(--ink); color:#fff; }
+    .button:hover { background:#333; color:#fff; }
+    .quickfacts { display:flex; gap:28px; flex-wrap:wrap; margin-top:48px; color:var(--muted); font-size:13px; }
+    .quickfacts strong { color:var(--ink); }
+    section { padding:68px 0; border-bottom:1px solid var(--line); }
+    .section-head { display:grid; grid-template-columns:220px 1fr; gap:36px; align-items:start; margin-bottom:28px; }
+    h2 { margin:0; font-size:13px; text-transform:uppercase; letter-spacing:.15em; }
+    .section-intro { max-width:650px; margin:0; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:14px; }
+    .card { min-height:190px; padding:24px; border:1px solid var(--line); border-radius:4px; display:flex; flex-direction:column; }
+    .card h3 { margin:0 0 10px; font-size:20px; letter-spacing:-.025em; }
+    .card p { margin:0 0 20px; color:#444; font-size:14px; }
+    .card-foot { margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:12px; font-size:12px; color:var(--muted); }
+    .card-foot a { color:var(--ink); font-weight:700; }
+    .project-list { display:flex; flex-wrap:wrap; gap:10px; }
+    .project-list a { display:inline-block; padding:10px 13px; border:1px solid var(--line); border-radius:3px; font-size:13px; text-decoration:none; }
+    .project-list a:hover { background:var(--soft); border-color:#888; }
+    .skills { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:0 36px; }
+    .skill-row { padding:16px 0; border-bottom:1px solid var(--line); }
+    .skill-row strong { display:block; margin-bottom:4px; font-size:14px; }
+    .skill-row span { color:var(--muted); font-size:14px; }
+    .timeline { display:grid; grid-template-columns:220px 1fr; gap:36px; padding:22px 0; border-top:1px solid var(--line); }
+    .timeline:first-of-type { border-top:0; }
+    .date { font-size:13px; color:var(--muted); }
+    .timeline h3 { margin:0 0 4px; font-size:18px; }
+    .timeline p { margin:0; color:var(--muted); font-size:14px; }
+    .certs { display:flex; flex-wrap:wrap; gap:9px; margin:18px 0 0; padding:0; list-style:none; }
+    .certs li { padding:7px 11px; border:1px solid var(--line); border-radius:3px; font-size:13px; }
+    .contact-box { display:flex; justify-content:space-between; gap:30px; align-items:center; padding:28px; background:var(--soft); border:1px solid var(--line); }
+    .contact-box h3 { margin:0 0 7px; font-size:23px; }
+    .contact-box p { margin:0; color:var(--muted); font-size:14px; }
+    .contact-links { display:flex; flex-wrap:wrap; gap:18px; font-size:14px; font-weight:700; }
+    footer { padding:26px 0 36px; color:var(--muted); font-size:12px; }
+    @media (max-width:700px) {
+      .wrap { width:min(100% - 32px, var(--width)); }
+      .nav { align-items:flex-start; padding:18px 0; flex-direction:column; }
+      nav { gap:14px; }
+      .hero { padding:72px 0 60px; }
+      .hero-copy { font-size:17px; }
+      section { padding:48px 0; }
+      .section-head,.timeline { grid-template-columns:1fr; gap:10px; }
+      .grid,.skills { grid-template-columns:1fr; }
+      .contact-box { align-items:flex-start; flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Pasham Nikitha</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <p class="eyebrow">Computer Science · AI &amp; ML · Hyderabad, India</p>
+      <h1>Curious about AI.<br>Driven to build.</h1>
+      <p class="hero-copy">I’m Pasham Nikitha, an AI &amp; ML undergraduate at Anurag University. I build Python projects across recommendation systems, machine learning, and data analysis, and I’m growing my skills in Generative AI.</p>
+      <div class="actions">
+        <a class="button primary" href="#projects">Explore my projects</a>
+        <a class="button" href="Pasham_Nikitha_Resume.pdf" target="_blank" rel="noopener">View resume</a>
+      </div>
+      <div class="quickfacts"><span><strong>Graduating</strong> 2027</span><span><strong>Focus</strong> AI · ML · Gen AI</span><span><strong>Open to</strong> Internship opportunities</span></div>
+    </div>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head"><h2>Selected projects</h2><p class="section-intro">A few projects from my resume. The linked repositories have more details about the work and code.</p></div>
+        <div class="grid">
+          <article class="card">
+            <h3>Movie Recommendation System</h3>
+            <p>Built a content-based movie recommender in Python. Text features are vectorized and cosine similarity ranks recommendations from user input.</p>
+            <div class="card-foot"><span>Python · pandas · scikit-learn</span><a href="https://github.com/NikithaProjects01/AI_Python" target="_blank" rel="noopener">View repository ↗</a></div>
+          </article>
+          <article class="card">
+            <h3>AI/ML Mini Tools</h3>
+            <p>Classification models, automation scripts, and data analysis tools built with Python, pandas, and scikit-learn.</p>
+            <div class="card-foot"><span>Machine learning · Data analysis</span><a href="https://github.com/NikithaProjects01/AI_Python" target="_blank" rel="noopener">View repository ↗</a></div>
+          </article>
+          <article class="card">
+            <h3>Student Dashboard Website</h3>
+            <p>A responsive academic dashboard for assignments, GPA, and attendance, using browser local storage to keep data between sessions.</p>
+            <div class="card-foot"><span>HTML · CSS · JavaScript</span><a href="https://github.com/NikithaProjects01/express_tracker1" target="_blank" rel="noopener">View repository ↗</a></div>
+          </article>
+          <article class="card">
+            <h3>More on GitHub</h3>
+            <p>Browse my other project repositories, including AI, RAG, multimodal, summarization, and developer tools projects.</p>
+            <div class="card-foot"><span>Project repository collection</span><a href="https://github.com/NikithaProjects01" target="_blank" rel="noopener">Visit GitHub ↗</a></div>
+          </article>
+        </div>
+        <div style="margin-top:28px">
+          <p class="eyebrow">More repositories</p>
+          <div class="project-list">
+            <a href="https://github.com/NikithaProjects01/disputeshield-ai" target="_blank" rel="noopener">DisputeShield AI</a>
+            <a href="https://github.com/NikithaProjects01/adaptive-RAG" target="_blank" rel="noopener">Adaptive RAG</a>
+            <a href="https://github.com/NikithaProjects01/enterprise-rag-platform" target="_blank" rel="noopener">Enterprise RAG Platform</a>
+            <a href="https://github.com/NikithaProjects01/multimodal" target="_blank" rel="noopener">Multimodal</a>
+            <a href="https://github.com/NikithaProjects01/summarizer" target="_blank" rel="noopener">Summarizer</a>
+            <a href="https://github.com/NikithaProjects01/code_reviewer" target="_blank" rel="noopener">Code Reviewer</a>
+            <a href="https://github.com/NikithaProjects01/Budget_Compass" target="_blank" rel="noopener">Budget Compass</a>
+            <a href="https://github.com/NikithaProjects01/Focus_day" target="_blank" rel="noopener">Focus Day</a>
+            <a href="https://github.com/NikithaProjects01/ADV_RAG" target="_blank" rel="noopener">ADV RAG</a>
+            <a href="https://github.com/NikithaProjects01/SCRUM" target="_blank" rel="noopener">SCRUM</a>
+            <a href="https://github.com/NikithaProjects01/express_tracker" target="_blank" rel="noopener">Express Tracker</a>
+            <a href="https://github.com/NikithaProjects01/SWITCH_CAREER_ADVISOR" target="_blank" rel="noopener">Switch Career Advisor</a>
+            <a href="https://github.com/NikithaProjects01/AI_TraceFinder" target="_blank" rel="noopener">AI TraceFinder</a>
+            <a href="https://github.com/NikithaProjects01/loc8r" target="_blank" rel="noopener">Loc8r</a>
+            <a href="https://github.com/NikithaProjects01/AI_Python" target="_blank" rel="noopener">AI Python</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head"><h2>Skills</h2><p class="section-intro">Tools and topics listed in my resume.</p></div>
+        <div class="skills">
+          <div class="skill-row"><strong>Programming</strong><span>Python, Java (basic), C, SQL</span></div>
+          <div class="skill-row"><strong>Machine learning</strong><span>Classification, recommendation systems, text vectorization, cosine similarity, model evaluation, ML fundamentals</span></div>
+          <div class="skill-row"><strong>Libraries and tools</strong><span>pandas, NumPy, scikit-learn, Jupyter Notebook, Git</span></div>
+          <div class="skill-row"><strong>Generative AI</strong><span>Generative AI fundamentals, prompt engineering</span></div>
+          <div class="skill-row"><strong>Web development</strong><span>HTML, CSS, JavaScript, Flask (basic)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head"><h2>Education &amp; experience</h2><p class="section-intro">My academic background and learning experience.</p></div>
+        <div class="timeline">
+          <div class="date">2023 — 2027 · Expected</div>
+          <div><h3>B.Tech, Computer Science (AI &amp; ML)</h3><p>Anurag University · Hyderabad · CGPA 7.05</p></div>
+        </div>
+        <div class="timeline">
+          <div class="date">Virtual internship</div>
+          <div><h3>Infosys Springboard</h3><p>Virtual Internship</p></div>
+        </div>
+        <div class="timeline">
+          <div class="date">Activities</div>
+          <div><h3>Hackathons &amp; coding clubs</h3><p>Participant in university-level hackathons and coding clubs.</p></div>
+        </div>
+        <p class="eyebrow" style="margin-top:28px">Certifications</p>
+        <ul class="certs"><li>AI/ML Fundamentals</li><li>Generative AI</li><li>Prompt Engineering</li><li>Python Programming</li><li>Java</li></ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div><h3>Let’s connect.</h3><p>Open to AI, ML, and Generative AI internship opportunities.</p></div>
+          <div class="contact-links"><a href="mailto:nikithapasham04@gmail.com">Email me</a><a href="https://www.linkedin.com/in/pasham-nikitha-77ba67351" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/NikithaProjects01" target="_blank" rel="noopener">GitHub ↗</a></div>
+        </div>
+        <p style="margin:14px 0 0;font-size:13px;color:#555">Phone: <a href="tel:+917032808936">+91 70328 08936</a></p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap">© 2026 Pasham Nikitha · Built with HTML and CSS</div></footer>
+</body>
+</html>
